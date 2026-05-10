@@ -46,7 +46,9 @@ async function loadFeaturedProducts() {
   productContainer.innerHTML = "";
 
   try {
-    const response = await fetch("http://localhost:5000/api/products/featured");
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/products/featured",
+    );
 
     if (!response.ok) {
       productContainer.innerHTML = `
@@ -110,7 +112,9 @@ async function loadAllProducts() {
   productContainer.innerHTML = "";
 
   try {
-    const response = await fetch("http://localhost:5000/api/products");
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/products",
+    );
 
     if (!response.ok) {
       productContainer.innerHTML = `

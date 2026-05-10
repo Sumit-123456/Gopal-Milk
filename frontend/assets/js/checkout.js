@@ -61,7 +61,7 @@ if (checkoutForm) {
 
     for (const productId of Object.keys(productCounts)) {
       const response = await fetch(
-        `http://localhost:5000/api/products/${productId}`,
+        `https://gopal-milk.onrender.com/api/products/${productId}`,
       );
 
       const product = await response.json();
@@ -112,7 +112,7 @@ if (checkoutForm) {
         */
 
     const paymentResponse = await fetch(
-      "http://localhost:5000/api/payments/create-order",
+      "https://gopal-milk.onrender.com/api/payments/create-order",
       {
         method: "POST",
         headers: {
@@ -155,7 +155,7 @@ if (checkoutForm) {
     */
 
         const verifyResponse = await fetch(
-          "http://localhost:5000/api/payments/verify-payment",
+          "https://gopal-milk.onrender.com/api/payments/verify-payment",
           {
             method: "POST",
             headers: {
@@ -247,20 +247,23 @@ async function placeFinalOrder(
   paymentDetails = {},
 ) {
   try {
-    const response = await fetch("http://localhost:5000/api/orders/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${userToken}`,
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/orders/create",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${userToken}`,
+        },
+        body: JSON.stringify({
+          products,
+          totalAmount,
+          shippingAddress,
+          paymentMethod,
+          paymentDetails,
+        }),
       },
-      body: JSON.stringify({
-        products,
-        totalAmount,
-        shippingAddress,
-        paymentMethod,
-        paymentDetails,
-      }),
-    });
+    );
 
     const data = await response.json();
 

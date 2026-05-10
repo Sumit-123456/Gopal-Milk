@@ -15,17 +15,20 @@ if (registerForm) {
     const password = document.getElementById("password").value;
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://gopal-milk.onrender.com/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+          }),
         },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -62,16 +65,19 @@ if (loginForm) {
     const password = document.getElementById("loginPassword").value;
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://gopal-milk.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
         },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      );
 
       const data = await response.json();
 

@@ -15,7 +15,7 @@ if (adminLoginForm) {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/admin/login",
+        "https://gopal-milk.onrender.com/api/auth/admin/login",
         {
           method: "POST",
           headers: {
@@ -87,7 +87,9 @@ async function loadDashboardStats() {
         ==========================================
         */
 
-    const productsRes = await fetch("http://localhost:5000/api/products");
+    const productsRes = await fetch(
+      "https://gopal-milk.onrender.com/api/products",
+    );
 
     const products = await productsRes.json();
 
@@ -97,11 +99,14 @@ async function loadDashboardStats() {
         ==========================================
         */
 
-    const usersRes = await fetch("http://localhost:5000/api/users/all-users", {
-      headers: {
-        Authorization: `Bearer ${adminToken}`,
+    const usersRes = await fetch(
+      "https://gopal-milk.onrender.com/api/users/all-users",
+      {
+        headers: {
+          Authorization: `Bearer ${adminToken}`,
+        },
       },
-    });
+    );
 
     const users = await usersRes.json();
 
@@ -112,7 +117,7 @@ async function loadDashboardStats() {
         */
 
     const ordersRes = await fetch(
-      "http://localhost:5000/api/orders/all-orders",
+      "https://gopal-milk.onrender.com/api/orders/all-orders",
       {
         headers: {
           Authorization: `Bearer ${adminToken}`,
@@ -185,14 +190,17 @@ if (productForm) {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/products/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${adminToken}`,
+      const response = await fetch(
+        "https://gopal-milk.onrender.com/api/products/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${adminToken}`,
+          },
+          body: JSON.stringify(newProduct),
         },
-        body: JSON.stringify(newProduct),
-      });
+      );
 
       const data = await response.json();
 
@@ -225,7 +233,9 @@ async function loadAdminProducts() {
   table.innerHTML = "";
 
   try {
-    const response = await fetch("http://localhost:5000/api/products");
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/products",
+    );
 
     const products = await response.json();
 
@@ -273,7 +283,7 @@ async function deleteProduct(productId) {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/products/delete/${productId}`,
+      `https://gopal-milk.onrender.com/api/products/delete/${productId}`,
       {
         method: "DELETE",
         headers: {
@@ -308,11 +318,14 @@ async function loadUsers() {
   table.innerHTML = "";
 
   try {
-    const response = await fetch("http://localhost:5000/api/users/all-users", {
-      headers: {
-        Authorization: `Bearer ${adminToken}`,
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/users/all-users",
+      {
+        headers: {
+          Authorization: `Bearer ${adminToken}`,
+        },
       },
-    });
+    );
 
     const users = await response.json();
 
@@ -347,7 +360,7 @@ async function deleteUser(userId) {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/users/delete-user/${userId}`,
+      `https://gopal-milk.onrender.com/api/users/delete-user/${userId}`,
       {
         method: "DELETE",
         headers: {
@@ -383,7 +396,7 @@ async function loadAdminOrders() {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/orders/all-orders",
+      "https://gopal-milk.onrender.com/api/orders/all-orders",
       {
         headers: {
           Authorization: `Bearer ${adminToken}`,
@@ -444,7 +457,7 @@ async function updateOrderStatus(orderId, newStatus) {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/orders/update-status/${orderId}`,
+      `https://gopal-milk.onrender.com/api/orders/update-status/${orderId}`,
       {
         method: "PUT",
         headers: {
@@ -516,7 +529,7 @@ async function editProduct(
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/products/update/${productId}`,
+      `https://gopal-milk.onrender.com/api/products/update/${productId}`,
       {
         method: "PUT",
         headers: {

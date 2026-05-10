@@ -59,7 +59,7 @@ async function loadCart() {
   for (const productId in productCounts) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${productId}`,
+        `https://gopal-milk.onrender.com/api/products/${productId}`,
       );
 
       if (!response.ok) continue;

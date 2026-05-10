@@ -30,11 +30,14 @@ async function loadOrders() {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/orders/my-orders", {
-      headers: {
-        Authorization: `Bearer ${userToken}`,
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/orders/my-orders",
+      {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
       },
-    });
+    );
 
     /*
         ==========================================
@@ -139,11 +142,14 @@ async function loadProfile() {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/users/profile", {
-      headers: {
-        Authorization: `Bearer ${userToken}`,
+    const response = await fetch(
+      "https://gopal-milk.onrender.com/api/users/profile",
+      {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
       },
-    });
+    );
 
     /*
         ==========================================
