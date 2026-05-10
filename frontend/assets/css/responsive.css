@@ -1,86 +1,61 @@
-@media (max-width: 768px) {
-        order: -1;
-        margin-right: auto;
+=========================
+/* TABLET RESPONSIVE */
+/* ========================= */
+
+@media(max-width: 992px){
+
+    .navbar{
+        padding: 20px 30px;
     }
 
-    .logo {
-        margin: 0 auto;
-        font-size: 24px;
-    }
-
-    .nav-links {
-        display: none;
+    .hero{
         flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 12px 0;
         text-align: center;
+        padding: 60px 30px;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .hero-content h1{
+        font-size: 48px;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
+    .hero-image{
+        margin-top: 40px;
     }
 
-    .hero-image {
-        order: -1;
+    .featured-products{
+        padding: 60px 30px;
     }
 
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .product-card img {
-        height: 180px;
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .shop-controls {
+    .hero-content h1{
+        font-size: 38px;
+    }
+
+    .newsletter form{
         flex-direction: column;
         align-items: center;
     }
 
-    .shop-controls input,
-    .shop-controls select {
+    .newsletter input{
         width: 100%;
+        max-width: 350px;
     }
 
-    form {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .section-title h2 {
-        font-size: 1.8rem;
-    }
-
-    .product-card {
-        padding: 15px;
-    }
-
-    .btn-primary,
-    button {
-        width: 100%;
-    }
 }
