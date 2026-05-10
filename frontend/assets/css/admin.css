@@ -1,110 +1,79 @@
-/* ========================= */
-/* ADMIN LAYOUT */
-/* ========================= */
-
-.admin-container {
-    display: flex;
-    min-height: 100vh;
+body {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
-.admin-sidebar {
-    width: 260px;
-    background: #1b5e20;
-    color: white;
-    padding: 30px 20px;
-}
-
-.admin-sidebar h2 {
-    margin-bottom: 40px;
-    font-size: 28px;
-}
-
-.admin-sidebar ul {
-    list-style: none;
-}
-
-.admin-sidebar ul li {
-    margin: 20px 0;
-}
-
-.admin-sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.admin-main {
-    flex: 1;
-    padding: 40px;
-    background: #f9f9f9;
-}
-
-/* ========================= */
-/* DASHBOARD CARDS */
-/* ========================= */
-
-.admin-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-}
-
-.admin-card {
-    background: white;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.admin-card h3 {
-    color: #1b5e20;
+.dashboard-card h3 {
+    color: #2e7d32;
     margin-bottom: 10px;
 }
 
-/* ========================= */
-/* TABLES */
-/* ========================= */
+.dashboard-card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
-.admin-table {
+table {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    border-radius: 12px;
+    border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.admin-table th,
-.admin-table td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+table th,
+table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.admin-table th {
+table th {
     background: #2e7d32;
     color: white;
 }
 
-/* ========================= */
-/* FORMS */
-/* ========================= */
+table tr:hover {
+    background: #f8fff8;
+}
+
+.admin-form {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
 
 .admin-form input,
-.admin-form textarea,
-.admin-form select {
+.admin-form select,
+.admin-form textarea {
     width: 100%;
     padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
 }
 
 .admin-form button {
-    padding: 14px 25px;
-    background: #2e7d32;
-    color: white;
+    width: 100%;
+    padding: 14px;
     border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: white;
+    font-weight: 600;
     cursor: pointer;
-    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }
