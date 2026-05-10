@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Pure Dairy</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">Pure Dairy</div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- LOGIN SECTION -->
+    <section class="featured-products">
+      <div class="section-title">
+        <h2>Welcome Back</h2>
+
+        <p>Login to continue shopping fresh dairy products.</p>
+      </div>
+
+      <form id="loginForm" class="checkout-form">
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Enter Your Email"
+          required
+        />
+
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter Your Password"
+          required
+        />
+
+        <button type="submit" class="btn-primary">Login</button>
+
+        <div style="margin-top: 20px; text-align: center">
+          <p>
+            <a href="forgot-password.html"> Forgot Password? </a>
+          </p>
+
+          <p style="margin-top: 10px">
+            Don't have an account?
+            <a href="register.html"> Register Here </a>
+          </p>
+        </div>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Pure Dairy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure Dairy - Fresh Dairy Delivered</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+      ==========================================
+      NAVBAR ENHANCEMENT
+      ==========================================
+      */
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 50px;
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #2e7d32;
+        white-space: nowrap;
+      }
+
+      nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links li {
+        list-style: none;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+
+      .nav-links a:hover {
+        color: #2e7d32;
+        background: rgba(46, 125, 50, 0.08);
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: #2e7d32;
+      }
+
+      /*
+      ==========================================
+      MOBILE RESPONSIVE NAVBAR
+      ==========================================
+      */
+
+      @media (max-width: 992px) {
+        .navbar {
+          padding: 18px 25px;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 80px;
+          right: 20px;
+          background: white;
+          flex-direction: column;
+          width: 250px;
+          padding: 20px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          border-radius: 12px;
+          display: none;
+          align-items: flex-start;
+          gap: 15px;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          width: 100%;
+        }
+
+        .nav-links a {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
+
+    <header class="navbar">
+      <div class="logo">Pure Dairy</div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <div class="menu-toggle" id="menuToggle">☰</div>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="shop.html">Shop</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
+          <li>
+            <a href="cart.html"> Cart (<span id="cartCount">0</span>) </a>
+          </li>
+
+          <li><a href="login.html">Login</a></li>
+
+          <li><a href="register.html">Register</a></li>
+
+          <li id="profileNav" style="display: none">
+            <a href="profile.html">Profile</a>
+          </li>
+
+          <li id="logoutNav" style="display: none">
+            <a href="#" onclick="logout()">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ========================= -->
+    <!-- HERO SECTION -->
+    <!-- ========================= -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Fresh Dairy Products Delivered Daily</h1>
+
+        <p>
+          Premium milk, paneer, butter, ghee and more directly from trusted
+          farms.
+        </p>
+
+        <a href="shop.html" class="btn-primary">Shop Now</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/images/dairy-hero.jpg" alt="Fresh Dairy Products" />
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- FEATURED PRODUCTS -->
+    <!-- ========================= -->
+
+    <section class="featured-products">
+      <div class="section-title">
+        <h2>Featured Products</h2>
+
+        <p>Handpicked fresh dairy products for your family.</p>
+      </div>
+
+      <div class="product-grid" id="featuredProducts">
+        <!-- Dynamic products from backend -->
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- NEWSLETTER -->
+    <!-- ========================= -->
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Subscribe for Offers</h2>
+
+        <p>Get updates on fresh arrivals and discounts.</p>
+
+        <form id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required />
+
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+      <div class="footer-content">
+        <h3>Pure Dairy</h3>
+
+        <p>Delivering farm fresh dairy products to your doorstep.</p>
+
+        <p>© 2026 Pure Dairy. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+/* ========================= */
+/* ADMIN LAYOUT */
+/* ========================= */
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background: #1b5e20;
+    color: white;
+    padding: 30px 20px;
+}
+
+.admin-sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+}
+
+.admin-sidebar ul li {
+    margin: 20px 0;
+}
+
+.admin-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.admin-main {
+    flex: 1;
+    padding: 40px;
+    background: #f9f9f9;
+}
+
+/* ========================= */
+/* DASHBOARD CARDS */
+/* ========================= */
+
+.admin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.admin-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.admin-card h3 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+/* ========================= */
+/* TABLES */
+/* ========================= */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #2e7d32;
+    color: white;
+}
+
+/* ========================= */
+/* FORMS */
+/* ========================= */
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.admin-form button {
+    padding: 14px 25px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}

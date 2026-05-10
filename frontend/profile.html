@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - Pure Dairy</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">Pure Dairy</div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PROFILE SECTION -->
+    <section class="featured-products">
+      <div class="section-title">
+        <h2>My Profile</h2>
+
+        <p>Manage your account details.</p>
+      </div>
+
+      <div id="profileContainer">
+        <!-- Dynamic profile info -->
+      </div>
+    </section>
+
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

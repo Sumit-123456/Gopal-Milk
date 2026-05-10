@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Products - Pure Dairy</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-container">
+      <aside class="admin-sidebar">
+        <h2>Pure Dairy Admin</h2>
+
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="users.html">Users</a></li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <h1>Product Management</h1>
+
+        <!-- ADD PRODUCT -->
+        <form id="productForm" class="admin-form">
+          <input
+            type="text"
+            id="productName"
+            placeholder="Product Name"
+            required
+          />
+
+          <textarea
+            id="productDescription"
+            placeholder="Description"
+            required
+          ></textarea>
+
+          <input
+            type="text"
+            id="productCategory"
+            placeholder="Category"
+            required
+          />
+
+          <input type="number" id="productPrice" placeholder="Price" required />
+
+          <input type="number" id="productStock" placeholder="Stock" required />
+
+          <input
+            type="text"
+            id="productImage"
+            placeholder="Image URL"
+            required
+          />
+
+          <button type="submit">Add Product</button>
+        </form>
+
+        <!-- PRODUCT TABLE -->
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="adminProductsTable"></tbody>
+        </table>
+      </main>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

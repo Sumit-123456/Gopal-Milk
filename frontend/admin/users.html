@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users - Pure Dairy</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-container">
+      <aside class="admin-sidebar">
+        <h2>Pure Dairy Admin</h2>
+
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="#" onclick="adminLogout()">Logout</a></li>
+        </ul>
+      </aside>
+
+      <main class="admin-main">
+        <h1>Customer Management</h1>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="adminUsersTable"></tbody>
+        </table>
+      </main>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

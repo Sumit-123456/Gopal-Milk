@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Pure Dairy</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">Pure Dairy</div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CHECKOUT SECTION -->
+    <section class="featured-products">
+      <div class="section-title">
+        <h2>Billing Details</h2>
+
+        <p>Complete your order securely.</p>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form">
+        <input type="text" id="fullName" placeholder="Full Name" required />
+
+        <input type="email" id="email" placeholder="Email Address" required />
+
+        <input type="text" id="phone" placeholder="Phone Number" required />
+
+        <input type="text" id="address" placeholder="Full Address" required />
+
+        <input type="text" id="city" placeholder="City" required />
+
+        <input type="text" id="state" placeholder="State" required />
+
+        <input type="text" id="pincode" placeholder="Pincode" required />
+
+        <select id="paymentMethod" required>
+          <option value="">Select Payment Method</option>
+
+          <option value="COD">Cash On Delivery</option>
+
+          <option value="Online">Online Payment</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Place Order</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <h3>Pure Dairy</h3>
+
+        <p>Fresh dairy products delivered daily.</p>
+      </div>
+    </footer>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="assets/js/checkout.js"></script>
+  </body>
+</html>

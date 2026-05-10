@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Pure Dairy</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body>
+    <div class="admin-container">
+      <!-- SIDEBAR -->
+      <aside class="admin-sidebar">
+        <h2>Pure Dairy Admin</h2>
+
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a href="#" onclick="adminLogout()">Logout</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="admin-main">
+        <h1>Dashboard Overview</h1>
+
+        <div class="admin-cards">
+          <div class="admin-card">
+            <h3>Total Products</h3>
+            <p id="totalProducts">0</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Total Orders</h3>
+            <p id="totalOrders">0</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Total Users</h3>
+            <p id="totalUsers">0</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Total Revenue</h3>
+            <p id="totalRevenue">₹0</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>
